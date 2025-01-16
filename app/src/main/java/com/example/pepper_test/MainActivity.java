@@ -29,6 +29,8 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button btnTanar
+
         // Regisztrálja az aktivitást a QiSDK-hoz
         QiSDK.register(this, this);
     }
@@ -38,7 +40,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         Log.d(TAG, "Robot fókusz elnyerve.");
 
         ChatBotClient c = new ChatBotClient(qiContext);
-        c.InitChatBot(R.raw.proba);
+        c.InitChatBot();
     }
 
     @Override

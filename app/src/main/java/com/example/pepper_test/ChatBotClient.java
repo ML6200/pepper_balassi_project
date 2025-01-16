@@ -15,14 +15,24 @@ import com.aldebaran.qi.sdk.object.conversation.Topic;
 public class ChatBotClient {
     private Chat chat;
     private Future<Void> chatFuture;
+    private QiContext qiContext;
 
-    public QiContext qiContext;
+    public int getResourceId() {
+        return resourceId;
+    }
+
+    public void setResourceId(int resourceId) {
+        this.resourceId = resourceId;
+    }
+
+    private int resourceId;
+
     public ChatBotClient(QiContext qiContext)
     {
         this.qiContext = qiContext;
     }
 
-    public void InitChatBot(int resourceId) {
+    public void InitChatBot() {
         Log.d("", "Robot fókusz elnyerve.");
 
         try {

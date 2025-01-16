@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="409dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="273dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_99664935_507514021375259_1166852213291579793_n__1_" />
+    <!-- ScrollView a kérdések görgetéséhez -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="600dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- A kérdéseket tartalmazó TextView -->
+        <TextView
+            android:id="@+id/questionsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            android:text="Balázs Péter\nBalog Éva\nBirgány Réka\nBolla József\nBóna Sára\nBorzák Attila\nBrezanóczy István\nCsábiné Gerbely Mária Magdolna\nDiósi Katalin\ndr. Jónás Kornélia\ndr. Kerényiné Szabó Réka\ndr. Kulcsár Csaba\nDudás Katalin\nEgyüd Enikő Bernadett\nGaál Károly Péter\nGombolai Dorina\nGyarmatiné Rostás Ida Mária\nHámos Alexandra\nHarsányi János Elemér\nHeffterné Gáspár Lilla\nHegedűs Csaba\nHering Noémi\nHorváth Anett\nHorváth Anita\nHreskó József\nIstvanovszki Róbertné\nJancsóné Zorván Zita\nJanik Réka\nKajtorné Hollósi Erzsébet\nLavaj Andrea Éva\nMayer Csaba László\nMészáros Adrienn Edina\nMogyorósi Attila\nMolnár János\nPayne-Seeley Peter John\nPénzes Attila\nRuga Ilona\nSokcsevits Balázs László\nStoch Balázs\nSzabó Andrea Eszter\nSzalay Éva\nSzlezákné Dóbiás Melinda Anna\nTihanyi Róbert\nTörök Tünde\nVárkonyiné Kanyó Rita"
+            android:textSize="35sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
