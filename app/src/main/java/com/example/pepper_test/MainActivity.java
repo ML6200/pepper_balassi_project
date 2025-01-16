@@ -37,32 +37,8 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     public void onRobotFocusGained(QiContext qiContext) {
         Log.d(TAG, "Robot fókusz elnyerve.");
 
-        try {
-            // A 'faq.qichat' fájl elérési útja az erőforrások között
-            int resourceId = R.raw.proba;
-
-            // Topic létrehozása a QiChat fájl betöltésével
-            Topic topic = TopicBuilder.with(qiContext)
-                    .withResource(resourceId)
-                    .build();
-
-            // QiChatbot létrehozása a Topic-kal
-            QiChatbot qiChatbot = QiChatbotBuilder.with(qiContext)
-                    .withTopic(topic)
-                    .build();
-
-            // Chat létrehozása a QiChatbot-tal
-            chat = ChatBuilder.with(qiContext)
-                    .withChatbot(qiChatbot)
-                    .build();
-
-            // Chat indítása
-            chatFuture = chat.async().run();
-            Log.d(TAG, "Chat indítása sikeresen megtörtént.");
-        } catch (Exception e) {
-            Log.e(TAG, "Hiba történt a chat indítása során: ", e);
-            Toast.makeText(this, "Hiba történt a chat indítása során.", Toast.LENGTH_SHORT).show();
-        }
+        ChatBotClient c = new ChatBotClient(qiContext);
+        c.InitChatBot(R.raw.proba);
     }
 
     @Override

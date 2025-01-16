@@ -4,4 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    tools:context=".MainActivity"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="409dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="137dp"
+        android:layout_marginBottom="273dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/_99664935_507514021375259_1166852213291579793_n__1_" />
+    <!-- ScrollView a kérdések görgetéséhez -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="420dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- A kérdéseket tartalmazó TextView -->
+        <TextView
+            android:id="@+id/questionsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8dp"
+            android:padding="16dp"
+            android:scrollbars="vertical"
+            android:text="Hogy hívnak?\n\nKi vagy te?\n\nMi a kedvenc színed?\n\nMi a Balassagyarmati Balassi Bálint Gimnázium?\n\nMilyen tantárgyakat tanítanak ott?\n\nMik a gimnázium legfontosabb hagyományai?\n\nVan-e valami érdekes esemény a közeljövőben?\n\nMiért választottad ezt az iskolát?\n\nHány diák jár a Balassagyarmati Balassi Bálint Gimnáziumba?\n\nMik a legnépszerűbb tantárgyak a gimnáziumban?\n\nMiért fontos a sport az iskolában?\n\nHogyan készülhetnek fel a diákok a versenyekre?\n\nMilyen szakkörök vannak a gimnáziumban?\n\nMilyen lehetőségek vannak a nyári programokra?\n\nMilyen érzés ott tanulni?"
+            android:textSize="18sp" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
