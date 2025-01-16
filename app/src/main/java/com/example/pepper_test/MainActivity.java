@@ -2,34 +2,60 @@ package com.example.pepper_test;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Button;
 
 import com.aldebaran.qi.Future;
 import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks;
-import com.aldebaran.qi.sdk.builder.ChatBuilder;
-import com.aldebaran.qi.sdk.builder.QiChatbotBuilder;
-import com.aldebaran.qi.sdk.builder.TopicBuilder;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
 import com.aldebaran.qi.sdk.object.conversation.Chat;
-import com.aldebaran.qi.sdk.object.conversation.QiChatbot;
-import com.aldebaran.qi.sdk.object.conversation.Topic;
+import com.aldebaran.qi.sdk.object.human.Human;
+import com.aldebaran.qi.sdk.object.humanawareness.HumanAwareness;
+import com.aldebaran.qi.sdk.object.humanawareness.HumanawarenessConverter;
 
 public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks {
+
+    enum ActivePage
+    {
+        TANAR,
+        FELVETELI,
+        ISKOLA
+    }
 
     private static final String TAG = "MainActivity";
     private Chat chat;
     private Future<Void> chatFuture;
+    private ActivePage activePage = ActivePage.ISKOLA;
+    private QiContext qiContext = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnTanar
+        Button btnTanar = findViewById(R.id.tanarok);
+        Button btnFelvetel = findViewById(R.id.felveteli);
+        Button btnIskola = findViewById(R.id.iskola);
+
+        btnTanar.setOnClickListener(e->
+        {
+            setContentView(R.layout.tanar_chat);
+            activePage = ActivePage.TANAR;
+        });
+
+        btnFelvetel.setOnClickListener(e->
+        {
+
+            activePage = ActivePage.FELVETELI;
+        });
+
+        btnIskola.setOnClickListener(e->
+        {
+            setContentView(R.layout.chat_bot_client);
+            activePage = ActivePage.ISKOLA;
+        });
 
         // Regisztrálja az aktivitást a QiSDK-hoz
         QiSDK.register(this, this);
@@ -38,9 +64,21 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     @Override
     public void onRobotFocusGained(QiContext qiContext) {
         Log.d(TAG, "Robot fókusz elnyerve.");
+        ChatBotClient chatBotClient = new ChatBotClient(qiContext);
 
-        ChatBotClient c = new ChatBotClient(qiContext);
-        c.InitChatBot();
+        HumanAwareness humanAwareness = qiContext.getHumanAwareness();
+
+        humanAwareness.addOnHumansAroundChangedListener(e->{
+            if (activePage == ActivePage.TANAR)
+            {
+                chatBotClient.setResourceId(R.raw.tanarok);
+                chatBotClient.InitChatBot();
+            } else if (activePage == ActivePage.ISKOLA)
+            {
+                chatBotClient.setResourceId(R.raw.proba);
+                chatBotClient.InitChatBot();
+            }
+        });
     }
 
     @Override

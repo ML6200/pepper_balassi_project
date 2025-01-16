@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -20,6 +20,7 @@
         app:srcCompat="@drawable/_99664935_507514021375259_1166852213291579793_n__1_" />
     <!-- ScrollView a kérdések görgetéséhez -->
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
@@ -44,5 +45,34 @@
             android:text="Balázs Péter\nBalog Éva\nBirgány Réka\nBolla József\nBóna Sára\nBorzák Attila\nBrezanóczy István\nCsábiné Gerbely Mária Magdolna\nDiósi Katalin\ndr. Jónás Kornélia\ndr. Kerényiné Szabó Réka\ndr. Kulcsár Csaba\nDudás Katalin\nEgyüd Enikő Bernadett\nGaál Károly Péter\nGombolai Dorina\nGyarmatiné Rostás Ida Mária\nHámos Alexandra\nHarsányi János Elemér\nHeffterné Gáspár Lilla\nHegedűs Csaba\nHering Noémi\nHorváth Anett\nHorváth Anita\nHreskó József\nIstvanovszki Róbertné\nJancsóné Zorván Zita\nJanik Réka\nKajtorné Hollósi Erzsébet\nLavaj Andrea Éva\nMayer Csaba László\nMészáros Adrienn Edina\nMogyorósi Attila\nMolnár János\nPayne-Seeley Peter John\nPénzes Attila\nRuga Ilona\nSokcsevits Balázs László\nStoch Balázs\nSzabó Andrea Eszter\nSzalay Éva\nSzlezákné Dóbiás Melinda Anna\nTihanyi Róbert\nTörök Tünde\nVárkonyiné Kanyó Rita"
             android:textSize="35sp" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="411dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="94dp"
+        android:layout_marginBottom="48dp"
+        android:text="Vissza"
+        app:backgroundTint="#062EBD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

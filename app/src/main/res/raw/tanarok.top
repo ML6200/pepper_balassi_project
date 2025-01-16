@@ -1,7 +1,136 @@
 topic: ~tanarok()
-# Defining extra concepts out of words or group of words
-#concept:(hello) [hello hi hey "good morning" greetings]
 
-# Replying to speech
-#u:(~hello) ~hello
+u: (Ki az a Balázs Péter?)
+Balázs Péter a 12.c osztályfőnöke. Fizikát tanít, emelt szintű fizikát és érettségi felkészítőt is tart. Közösségi nevelést is oktat, osztályfőnökként.
 
+u: (Ki az a Balog Éva?)
+Balog Éva a 12.d osztályfőnöke. Történelemet és német nyelvet tanít, valamint tanulásmódszertant is oktat. Közösségi nevelést is végez, és osztályfőnökként dolgozik.
+
+u: (Ki az a Birgány Réka?)
+Birgány Réka francia nyelvet, magyar nyelvet és irodalmat tanít. Egyéni képességfejlesztést és tehetséggondozást is végez, diákjaiknak irodalmi ismeretekben is segítséget nyújt.
+
+u: (Ki az a Bolla József?)
+Bolla József a 10.c osztályfőnöke. Olasz nyelvet tanít, és közösségi nevelést végez osztályfőnökként.
+
+u: (Ki az a Bóna Sára?)
+Bóna Sára etikai, magyar nyelv és irodalom tantárgyakat tanít. Tanulásmódszertant és tehetséggondozást is oktat, emellett egyéni képességfejlesztésben is részt vesz.
+
+u: (Ki az a Borzák Attila?)
+Borzák Attila fizika, kémia és matematika tantárgyakat tanít, egyéni képességfejlesztésben is részt vesz.
+
+u: (Ki az a Brezanóczy István?)
+Brezanóczy István angol és orosz nyelveket tanít.
+
+u: (Ki az a Csábiné Gerbely Mária Magdolna?)
+Csábiné Gerbely Mária Magdolna matematika és életvitel tantárgyakat tanít, valamint egyéni képességfejlesztést is végez.
+
+u: (Ki az a Diósi Katalin?)
+Diósi Katalin a 6.a osztályfőnöke. Informatikát, matematikát és fizikát tanít, valamint digitális kultúra oktatással és tehetséggondozással is foglalkozik.
+
+u: (Ki az a dr. Jónás Kornélia?)
+Dr. Jónás Kornélia a 9.b osztályfőnöke. Magyar nyelvet, irodalmat és szlovák nyelvet tanít, és tehetséggondozásban is részt vesz.
+
+u: (Ki az a dr. Kerényiné Szabó Réka?)
+Dr. Kerényiné Szabó Réka a 10.b osztályfőnöke. Testnevelést és biológiát tanít, közösségi nevelést is végez.
+
+u: (Ki az a dr. Kulcsár Csaba?)
+Dr. Kulcsár Csaba érettségi felkészítőt, kémiát és természettudományokat tanít.
+
+u: (Ki az a Dudás Katalin?)
+Dudás Katalin a 10.a osztályfőnöke. Angol nyelvet tanít és közösségi nevelést végez.
+
+u: (Ki az a Együd Enikő Bernadett?)
+Együd Enikő Bernadett német és olasz nyelveket tanít, egyéni képességfejlesztést és tehetséggondozást is végez.
+
+u: (Ki az a Gaál Károly Péter?)
+Gaál Károly Péter testnevelés tantárgyat tanít.
+
+u: (Ki az a Gombolai Dorina?)
+Gombolai Dorina a 8.a osztályfőnöke. Biológiát, matematikát és érettségi felkészítőt tanít, közösségi nevelést is végez.
+
+u: (Ki az a Gyarmatiné Rostás Ida Mária?)
+Gyarmatiné Rostás Ida Mária a 12.b osztályfőnöke. Magyar nyelvet, irodalmat és történelmet tanít, emellett dráma és színház oktatásával is foglalkozik.
+
+u: (Ki az a Hámos Alexandra?)
+Hámos Alexandra a 10.d osztályfőnöke. Angol nyelvet és szlovák nyelvet tanít, közösségi nevelést is végez.
+
+u: (Ki az a Harsányi János Elemér?)
+Harsányi János Elemér iskolánk igazgatóhelyettese és emellett fizika, informatika és matematika tantárgyakat tanít, digitális kultúra oktatásával is foglalkozik.
+
+u: (Ki az a Heffterné Gáspár Lilla?)
+Heffterné Gáspár Lilla a 11.d osztályfőnöke. Mozgóképkultúrát, médiaismeretet, matematikát és vizuális kultúrát tanít.
+
+u: (Ki az a Hegedűs Csaba?)
+Hegedűs Csaba a 11.c osztályfőnöke. Fizikát és matematikát tanít, érettségi felkészítőt is tart.
+
+u: (Ki az a Hering Noémi?)
+Hering Noémi magyar nyelvet és irodalmat, francia nyelvet tanít, valamint egyéni képességfejlesztéssel és kommunikációval is foglalkozik.
+
+u: (Ki az a Horváth Anett?)
+Horváth Anett angol nyelvet és történelmet tanít, érettségi felkészítőt is végez.
+
+u: (Ki az a Horváth Anita?)
+Horváth Anita magyar nyelvet és irodalmat, mozgóképkultúrát és médiaismeretet tanít.
+
+u: (Ki az a Hreskó József?)
+Hreskó József kémiát tanít.
+
+u: (Ki az a Istvanovszki Róbertné?)
+Istvanovszki Róbertné iskolánk igazgatóhelyettese és emellett fizikát és matematikát tanít.
+
+u: (Ki az a Jancsóné Zorván Zita?)
+Jancsóné Zorván Zita a 12.a osztályfőnöke. Földrajzot, német nyelvet és történelmet tanít, érettségi felkészítőt is végez.
+
+u: (Ki az a Janik Réka?)
+Janik Réka a 11.a osztályfőnöke. Magyar nyelvet és irodalmat, történelmet tanít, érettségi felkészítőt is tart.
+
+u: (Ki az a Kajtorné Hollósi Erzsébet?)
+Kajtorné Hollósi Erzsébet angol nyelvet és orosz nyelvet tanít.
+
+u: (Ki az a Lavaj Andrea Éva?)
+Lavaj Andrea Éva a 9.AJTP osztályfőnöke. Testnevelést tanít, érettségi felkészítőt is végez.
+
+u: (Ki az a Mayer Csaba László?)
+Mayer Csaba László angol nyelvet és történelmet tanít, célnyelvi civilizációval is foglalkozik.
+
+u: (Ki az a Mészáros Adrienn Edina?)
+Mészáros Adrienn Edina a 11.b osztályfőnöke. Német nyelvet tanít, tehetséggondozásban is részt vesz.
+
+u: (Ki az a Mogyorósi Attila?)
+Mogyorósi Attila iskolánk igazgatója és emellet biológiát és földrajzot tanít.
+
+u: (Ki az a Molnár János?)
+Molnár János fizikát, informatikát és matematikát tanít, digitális kultúra oktatásával is foglalkozik.
+
+u: (Ki az a Payne-Seeley Peter John?)
+Payne-Seeley Peter John angol nyelvet tanít.
+
+u: (Ki az a Pénzes Attila?)
+Pénzes Attila az 5.a osztályfőnöke. Földrajzot és történelmet tanít, állampolgári ismereteket is oktat.
+
+u: (Ki az a Ruga Ilona?)
+Ruga Ilona orosz nyelvet és történelmet tanít, érettségi felkészítőt is tart.
+
+u: (Ki az a Sokcsevits Balázs László?)
+Sokcsevits Balázs László a 9.c osztályfőnöke. Földrajzot, történelmet és angol nyelvet tanít.
+
+u: (Ki az a Stoch Balázs?)
+Stoch Balázs testnevelést tanít.
+
+u: (Ki az a Szabó Andrea Eszter?)
+Szabó Andrea Eszter a 7.a osztályfőnöke. Angol nyelvet és magyar nyelvet tanít, tehetséggondozással is foglalkozik.
+
+u: (Ki az a Szalay Éva?)
+Szalay Éva a 9/KNY osztályfőnöke. Német nyelvet, orosz nyelvet és történelmet tanít.
+
+u: (Ki az a Szlezákné Dóbiás Melinda Anna?)
+Szlezákné Dóbiás Melinda Anna biológiát és földrajzot tanít, érettségi felkészítőt is tart.
+
+u: (Ki az a Tihanyi Róbert?)
+Tihanyi Róbert a 9.d osztályfőnöke. Testnevelést és történelmet tanít, közösségi nevelést is végez.
+
+u: (Ki az a Török Tünde?)
+Török Tünde angol nyelvet tanít, célnyelvi civilizációval is foglalkozik.
+
+u: (Ki az a Várkonyiné Kanyó Rita?)
+Várkonyiné Kanyó Rita a 9.a osztályfőnöke. Iskolánkban német nyelvet, közösségi nevelést oktat, részt vesz német nyelvi tehetséggondozásban is.
