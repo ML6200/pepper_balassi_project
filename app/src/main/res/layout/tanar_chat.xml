@@ -7,50 +7,51 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+    <!-- ScrollView a kérdések görgetéséhez -->
+
     <Button
         android:id="@+id/vissza"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginStart="996dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="91dp"
         android:text="Vissza"
         app:backgroundTint="#C84343"
         app:cornerRadius="0dp"
         app:icon="@drawable/backicon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="390dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="273dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="371dp"
+        android:layout_height="330dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_99664935_507514021375259_1166852213291579793_n__1_" />
-    <!-- ScrollView a kérdések görgetéséhez -->
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="600dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="444dp"
+        android:layout_height="497dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="39dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- A kérdéseket tartalmazó TextView -->
         <TextView
@@ -69,13 +70,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="493dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        app:layout_constraintGuide_begin="429dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

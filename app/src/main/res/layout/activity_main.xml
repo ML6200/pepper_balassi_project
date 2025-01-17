@@ -15,7 +15,8 @@
         android:layout_height="100dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="30dp"
         android:text="Felvételi"
         android:textSize="30sp"
         app:backgroundTint="#4163DC"
@@ -23,6 +24,7 @@
         app:iconSize="50sp"
         app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/tanarok"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +43,6 @@
         app:iconSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/iskola"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/felveteli" />
 
@@ -51,6 +52,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="110dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
         android:layout_marginBottom="100dp"
         android:text="Iskola"
         android:textSize="30sp"
@@ -58,6 +60,7 @@
         app:icon="@drawable/iskolaicon"
         app:iconSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tanarok" />
 

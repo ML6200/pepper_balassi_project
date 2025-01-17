@@ -13,45 +13,47 @@
         android:id="@+id/vissza"
         android:layout_width="150dp"
         android:layout_height="60dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="158dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="94dp"
         android:text="Vissza"
         app:backgroundTint="#C84343"
         app:cornerRadius="0dp"
         app:icon="@drawable/backicon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/guideline9" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="390dp"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="137dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="273dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="360dp"
+        android:layout_height="343dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scrollView3"
+        app:layout_constraintStart_toEndOf="@+id/guideline6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/_99664935_507514021375259_1166852213291579793_n__1_" />
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="818dp"
-        android:layout_height="696dp"
-        android:layout_marginTop="94dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="552dp"
+        android:layout_height="511dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.344">
 
         <!-- A kérdéseket tartalmazó TextView -->
         <TextView
@@ -70,6 +72,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="829dp" />
+        app:layout_constraintGuide_begin="574dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="424dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
