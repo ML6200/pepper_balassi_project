@@ -11,72 +11,113 @@
 
     <Button
         android:id="@+id/felveteli"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="90dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
         android:text="Felvételi"
-        app:backgroundTint="#062EBD"
+        android:textSize="30sp"
+        app:backgroundTint="#4163DC"
+        app:icon="@drawable/felviicon"
+        app:iconSize="50sp"
+        app:iconTint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/tanarok"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tanarok"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginBottom="90dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="30dp"
         android:text="Tanárok"
-        app:backgroundTint="#062EBD"
+        android:textSize="30sp"
+        app:backgroundTint="#4163DC"
+        app:icon="@drawable/tanaricon"
+        app:iconSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/iskola"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/felveteli" />
 
     <Button
         android:id="@+id/iskola"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginBottom="240dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
         android:text="Iskola"
-        app:backgroundTint="#062EBD"
+        android:textSize="30sp"
+        app:backgroundTint="#4163DC"
+        app:icon="@drawable/iskolaicon"
+        app:iconSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tanarok" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="390dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="250dp"
-        android:layout_marginBottom="273dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="358dp"
+        android:layout_height="358dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_99664935_507514021375259_1166852213291579793_n__1_" />
+
+    <Button
+        android:id="@+id/vissza"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="53dp"
+        android:text="Vissza"
+        app:backgroundTint="#C84343"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/backicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-4dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-1dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="500dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="473dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

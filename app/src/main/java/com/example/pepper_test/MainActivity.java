@@ -4,30 +4,35 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
-import com.aldebaran.qi.Future;
 import com.aldebaran.qi.sdk.QiContext;
 import com.aldebaran.qi.sdk.QiSDK;
 import com.aldebaran.qi.sdk.RobotLifecycleCallbacks;
 import com.aldebaran.qi.sdk.design.activity.RobotActivity;
-import com.aldebaran.qi.sdk.object.conversation.Chat;
-import com.aldebaran.qi.sdk.object.human.Human;
 import com.aldebaran.qi.sdk.object.humanawareness.HumanAwareness;
-import com.aldebaran.qi.sdk.object.humanawareness.HumanawarenessConverter;
+import com.aldebaran.qi.sdk.object.touch.Touch;
+import com.aldebaran.qi.sdk.object.touch.TouchSensor;
+import com.aldebaran.qi.sdk.object.touch.TouchState;
 
-public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks {
-
+public class MainActivity extends RobotActivity implements RobotLifecycleCallbacks
+{
     enum ActivePage
     {
         TANAR,
         FELVETELI,
-        ISKOLA
+        ISKOLA,
+        FO
     }
 
     private static final String TAG = "MainActivity";
-    private Chat chat;
-    private Future<Void> chatFuture;
     private ActivePage activePage = ActivePage.ISKOLA;
+    private ChatBotController chatBotController;
     private QiContext qiContext = null;
+
+    //UI elemek deklarálása
+    private Button btnTanar;
+    private Button btnFelvetel;
+    private Button btnIskola;
+    private Button btnVissza;
 
 
     @Override
@@ -35,9 +40,16 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnTanar = findViewById(R.id.tanarok);
-        Button btnFelvetel = findViewById(R.id.felveteli);
-        Button btnIskola = findViewById(R.id.iskola);
+        btnTanar = findViewById(R.id.tanarok);
+        btnFelvetel = findViewById(R.id.felveteli);
+        btnIskola = findViewById(R.id.iskola);
+        btnVissza = findViewById(R.id.vissza);
+
+        btnVissza.setOnClickListener(e->
+        {
+            setContentView(R.layout.activity_main);
+            activePage = ActivePage.FO;
+        });
 
         btnTanar.setOnClickListener(e->
         {
@@ -47,7 +59,7 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
 
         btnFelvetel.setOnClickListener(e->
         {
-
+            setContentView(R.layout.felveteli_diakok);
             activePage = ActivePage.FELVETELI;
         });
 
@@ -57,37 +69,42 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
             activePage = ActivePage.ISKOLA;
         });
 
-        // Regisztrálja az aktivitást a QiSDK-hoz
+        // Regisztrálja az aktivitást a Sepper sdk-hoz
         QiSDK.register(this, this);
     }
 
     @Override
     public void onRobotFocusGained(QiContext qiContext) {
-        Log.d(TAG, "Robot fókusz elnyerve.");
-        ChatBotClient chatBotClient = new ChatBotClient(qiContext);
-
         HumanAwareness humanAwareness = qiContext.getHumanAwareness();
 
-        humanAwareness.addOnHumansAroundChangedListener(e->{
+        Log.d(TAG, "Robot fókusz elnyerve.");
+
+        chatBotController = new ChatBotController(qiContext);
+        chatBotController.startConversation();
+
+        //ha mozognak körülötte
+        humanAwareness.addOnHumansAroundChangedListener(e->
+        {
             if (activePage == ActivePage.TANAR)
             {
-                chatBotClient.setResourceId(R.raw.tanarok);
-                chatBotClient.InitChatBot();
-            } else if (activePage == ActivePage.ISKOLA)
+                chatBotController.changeTopic(Temak.TANAROK);
+            }
+            else if (activePage == ActivePage.ISKOLA)
             {
-                chatBotClient.setResourceId(R.raw.proba);
-                chatBotClient.InitChatBot();
+                chatBotController.changeTopic(Temak.ISKOLA);
+            }
+            else if (activePage == ActivePage.FELVETELI)
+            {
+                chatBotController.changeTopic(Temak.FELVI);
             }
         });
     }
 
     @Override
-    public void onRobotFocusLost() {
+    public void onRobotFocusLost()
+    {
         Log.d(TAG, "Robot fókusz elvesztve.");
-        // Chat leállítása, ha a robot fókusz elveszett
-        if (chatFuture != null && !chatFuture.isDone()) {
-            chatFuture.requestCancellation();
-        }
+        chatBotController.requestEndConversation();
     }
 
     @Override
@@ -99,11 +116,25 @@ public class MainActivity extends RobotActivity implements RobotLifecycleCallbac
     protected void onDestroy() {
         super.onDestroy();
         Log.d(TAG, "Aktivitás megsemmisítése.");
-        // Aktivitás leiratkozása a QiSDK-ról
+
+        // Aktivitás leregisztrálása
         QiSDK.unregister(this, this);
-        // Chat leállítása, ha az aktivitás megsemmisül
-        if (chatFuture != null && !chatFuture.isDone()) {
-            chatFuture.requestCancellation();
-        }
+        chatBotController.requestEndConversation();
+    }
+
+
+    // -------------------------------USER-DEFINED----------------------------------
+    private void initTouchSensors(QiContext qiContext)
+    {
+        Touch touch = qiContext.getTouch();
+        TouchSensor touchSensor = touch.getSensor("Head/Touch");
+        touchSensor.addOnStateChangedListener(new TouchSensor.OnStateChangedListener()
+        {
+            @Override
+            public void onStateChanged(TouchState state)
+            {
+
+            }
+        });
     }
 }

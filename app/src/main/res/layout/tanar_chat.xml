@@ -7,6 +7,24 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/vissza"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="996dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="100dp"
+        android:text="Vissza"
+        app:backgroundTint="#C84343"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/backicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="409dp"
@@ -45,21 +63,6 @@
             android:text="Balázs Péter\nBalog Éva\nBirgány Réka\nBolla József\nBóna Sára\nBorzák Attila\nBrezanóczy István\nCsábiné Gerbely Mária Magdolna\nDiósi Katalin\ndr. Jónás Kornélia\ndr. Kerényiné Szabó Réka\ndr. Kulcsár Csaba\nDudás Katalin\nEgyüd Enikő Bernadett\nGaál Károly Péter\nGombolai Dorina\nGyarmatiné Rostás Ida Mária\nHámos Alexandra\nHarsányi János Elemér\nHeffterné Gáspár Lilla\nHegedűs Csaba\nHering Noémi\nHorváth Anett\nHorváth Anita\nHreskó József\nIstvanovszki Róbertné\nJancsóné Zorván Zita\nJanik Réka\nKajtorné Hollósi Erzsébet\nLavaj Andrea Éva\nMayer Csaba László\nMészáros Adrienn Edina\nMogyorósi Attila\nMolnár János\nPayne-Seeley Peter John\nPénzes Attila\nRuga Ilona\nSokcsevits Balázs László\nStoch Balázs\nSzabó Andrea Eszter\nSzalay Éva\nSzlezákné Dóbiás Melinda Anna\nTihanyi Róbert\nTörök Tünde\nVárkonyiné Kanyó Rita"
             android:textSize="35sp" />
     </ScrollView>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="411dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="48dp"
-        android:text="Vissza"
-        app:backgroundTint="#062EBD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"

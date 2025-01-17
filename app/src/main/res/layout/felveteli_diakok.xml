@@ -7,6 +7,24 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/vissza"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="996dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="100dp"
+        android:text="Vissza"
+        app:backgroundTint="#C84343"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/backicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="409dp"
@@ -45,21 +63,6 @@
             android:text="Mond meg a nevedet aztán megmondom a terem azonosítóját és a időpontodat."
             android:textSize="35sp" />
     </ScrollView>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="411dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="94dp"
-        android:layout_marginBottom="48dp"
-        android:text="Vissza"
-        app:backgroundTint="#062EBD"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scrollView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"

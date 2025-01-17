@@ -4,33 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- ScrollView a kérdések görgetéséhez -->
+
+    <Button
+        android:id="@+id/vissza"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginBottom="128dp"
+        android:text="Vissza"
+        app:backgroundTint="#C84343"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/backicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="409dp"
         android:layout_height="390dp"
+        android:layout_marginStart="21dp"
         android:layout_marginTop="137dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="273dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollView3"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/_99664935_507514021375259_1166852213291579793_n__1_" />
-    <!-- ScrollView a kérdések görgetéséhez -->
+
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="420dp"
+        android:id="@+id/scrollView3"
+        android:layout_width="818dp"
+        android:layout_height="696dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- A kérdéseket tartalmazó TextView -->
         <TextView
@@ -41,7 +62,14 @@
             android:padding="16dp"
             android:scrollbars="vertical"
             android:text="Hogy hívnak?\n\nKi vagy te?\n\nMi a kedvenc színed?\n\nMi a Balassagyarmati Balassi Bálint Gimnázium?\n\nMilyen tantárgyakat tanítanak ott?\n\nMik a gimnázium legfontosabb hagyományai?\n\nVan-e valami érdekes esemény a közeljövőben?\n\nMiért választottad ezt az iskolát?\n\nHány diák jár a Balassagyarmati Balassi Bálint Gimnáziumba?\n\nMik a legnépszerűbb tantárgyak a gimnáziumban?\n\nMiért fontos a sport az iskolában?\n\nHogyan készülhetnek fel a diákok a versenyekre?\n\nMilyen szakkörök vannak a gimnáziumban?\n\nMilyen lehetőségek vannak a nyári programokra?\n\nMilyen érzés ott tanulni?"
-            android:textSize="18sp" />
+            android:textSize="25sp" />
     </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="829dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
